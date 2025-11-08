@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - UMKM Kita</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel - Kelola Produk</h1>
+        
+        <!-- Form untuk Tambah/Edit Produk -->
+        <div class="form-container">
+            <h2 id="form-title">Tambah Produk Baru</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="form-group">
+                    <label for="name">Nama Produk</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Harga</label>
+                    <input type="number" id="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">URL Gambar</label>
+                    <input type="text" id="image" required>
+                </div>
+
+                <!-- ==================== TAMBAHKAN BAGIAN INI ==================== -->
+                <div class="form-group">
+                    <label for="category">Kategori</label>
+                    <select id="category" required>
+                        <option value="Makanan">Makanan</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Kerajinan">Kerajinan</option>
+                        <option value="Elektronik">Elektronik</option>
+                        <option value="Kesehatan">Kesehatan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="is_featured">
+                        <input type="checkbox" id="is_featured"> Tandai sebagai Produk Unggulan
+                    </label>
+                </div>
+                <!-- ========================================================== -->
+
+                <button type="submit" class="btn btn-primary">Simpan Produk</button>
+                <button type="button" id="cancel-edit" class="btn btn-secondary" style="display:none;">Batal</button>
+            </form>
+        </div>
+
+        <!-- Tabel Daftar Produk -->
+        <div class="table-container">
+            <h2>Daftar Produk</h2>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Harga</th>
+                        <th>Kategori</th> <!-- TAMBAHKAN HEADER KATEGORI -->
+                        <th>Gambar</th>
+                        <th>Unggulan</th> <!-- TAMBAHKAN HEADER UNGGULAN -->
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Produk akan dimuat oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

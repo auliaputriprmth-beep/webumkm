@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Produk - UMKM Kita</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style khusus untuk halaman ini */
+        .filter-buttons { text-align: center; margin-bottom: 40px; }
+        .filter-btn { background: #e0e0e0; border: none; padding: 10px 20px; margin: 5px; border-radius: 20px; cursor: pointer; transition: background 0.3s; }
+        .filter-btn.active { background: var(--secondary-color); color: white; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">UMKM<span>Kita</span></a>
+            <nav class="main-nav">
+                <a href="index.html">Beranda</a>
+                <a href="products.html">Semua Produk</a>
+            </nav>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-section">
+        <div class="container">
+            <h1>Semua Produk</h1>
+            <div class="filter-buttons" id="filter-buttons">
+                <!-- Tombol filter akan dibuat oleh JavaScript -->
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Produk akan dimuat oleh JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Keranjang (sama seperti di index.html) -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header"><h2>Keranjang Belanja</h2><span class="close-btn" id="close-cart-btn">&times;</span></div>
+            <div class="cart-body"><div id="cart-items-container"></div><div class="cart-total"><h3>Total: <span id="cart-total">Rp 0</span></h3></div></div>
+            <div class="cart-footer"><button id="checkout-btn">Beli Sekarang</button></div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 UMKM Kita. Semua Hak Dilindungi.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>
